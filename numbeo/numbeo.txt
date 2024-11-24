@@ -1,0 +1,362 @@
+Zurich, Switzerland	106.4	58.5	85.1	109.1	106.3	167.1
+Lausanne, Switzerland	104.5	42.7	77.0	114.9	101.7	156.8
+Geneva, Switzerland	103.5	58.0	83.3	111.9	106.5	163.2
+Basel, Switzerland	102.0	43.2	75.9	112.9	105.0	174.1
+New York, NY, United States	100.0	100.0	100.0	100.0	100.0	100.0
+Bern, Switzerland	97.5	35.1	69.8	105.3	87.7	162.7
+San Francisco, CA, United States	91.2	77.6	85.2	107.4	88.8	166.8
+Honolulu, HI, United States	86.7	57.0	73.5	106.4	79.0	107.5
+Boston, MA, United States	84.8	71.1	78.7	98.3	87.5	134.4
+Reykjavik, Iceland	82.9	43.8	65.5	95.2	91.2	105.9
+San Jose, CA, United States	82.2	69.3	76.5	91.3	81.3	148.9
+Washington, DC, United States	81.1	65.7	74.3	87.8	85.0	147.5
+London, United Kingdom	79.7	66.8	74.0	65.6	80.8	111.0
+Trondheim, Norway	79.6	27.8	56.6	79.8	84.9	104.0
+Singapore, Singapore	79.5	67.4	74.1	74.5	51.9	109.0
+Sacramento, CA, United States	78.1	49.9	65.6	89.6	71.2	124.4
+Seattle, WA, United States	77.9	57.5	68.8	86.5	80.7	178.1
+San Diego, CA, United States	77.5	68.9	73.7	78.1	77.7	139.9
+Los Angeles, CA, United States	77.5	63.3	71.2	84.0	89.9	132.7
+Oslo, Norway	77.4	32.3	57.3	84.4	82.6	120.2
+Bergen, Norway	75.6	26.2	53.6	80.2	85.2	108.1
+Hong Kong, Hong Kong (China)	74.6	56.9	66.7	79.2	48.1	103.4
+Miami, FL, United States	74.2	68.6	71.7	79.1	85.7	112.8
+Chicago, IL, United States	74.0	54.3	65.3	87.1	83.1	141.8
+Copenhagen, Denmark	73.0	38.7	57.7	67.5	87.5	128.1
+Tel Aviv-Yafo, Israel	72.8	38.1	57.4	66.0	82.3	103.1
+Raleigh, NC, United States	72.6	48.3	61.8	81.3	74.2	141.3
+Denver, CO, United States	72.5	50.8	62.9	81.7	73.1	138.9
+Sydney, Australia	72.1	49.1	61.9	78.8	61.2	121.0
+Charlotte, NC, United States	71.7	50.9	62.5	85.5	71.3	134.4
+Portland, OR, United States	71.7	44.7	59.7	82.4	67.8	146.7
+New Orleans, LA, United States	71.6	39.9	57.5	79.4	83.9	123.9
+Tampa, FL, United States	71.5	48.0	61.0	83.0	74.0	149.7
+Philadelphia, PA, United States	71.4	40.5	57.7	86.7	69.2	134.4
+Atlanta, GA, United States	71.4	42.8	58.7	85.7	75.1	172.2
+Canberra, Australia	71.3	37.9	56.5	79.3	71.1	114.3
+Paris, France	70.2	38.6	56.1	75.8	65.7	105.3
+Espoo, Finland	69.6	26.2	50.3	73.4	78.0	115.3
+Aarhus, Denmark	68.8	28.3	50.8	65.6	85.5	132.7
+Amsterdam, Netherlands	68.7	49.7	60.2	62.3	76.1	134.8
+Cambridge, United Kingdom	68.5	41.4	56.5	70.8	69.8	125.5
+Nashville, TN, United States	68.0	48.0	59.1	77.4	69.1	142.9
+Seoul, South Korea	67.8	26.0	49.2	89.9	38.3	105.9
+Munich, Germany	67.6	38.1	54.5	61.1	69.0	119.6
+Minneapolis, MN, United States	67.4	36.5	53.7	78.6	75.7	150.2
+Haarlem, Netherlands	67.2	33.4	52.2	62.0	80.6	101.4
+Victoria, Canada	66.9	39.3	54.6	80.7	65.5	81.4
+Dallas, TX, United States	66.8	45.9	57.5	72.5	70.1	163.2
+Salzburg, Austria	66.7	26.9	49.0	74.5	61.1	101.7
+Orlando, FL, United States	66.6	45.9	57.4	76.6	75.0	141.1
+Baltimore, MD, United States	66.5	41.6	55.4	79.0	68.2	131.6
+Columbus, OH, United States	66.4	37.8	53.7	78.4	67.5	136.2
+Dublin, Ireland	66.3	51.9	59.9	60.5	73.4	111.5
+Jerusalem, Israel	65.7	33.9	51.6	59.1	74.0	83.5
+Adelaide, Australia	65.7	31.1	50.3	74.1	69.0	122.6
+Edinburgh, United Kingdom	65.4	36.2	52.4	64.0	70.3	127.3
+Vancouver, Canada	65.2	48.3	57.7	75.8	66.9	107.5
+Luxembourg, Luxembourg	65.1	45.3	56.3	65.9	76.7	178.8
+Perth, Australia	65.0	32.7	50.6	75.1	65.8	141.0
+Helsinki, Finland	65.0	25.0	47.2	65.7	74.3	115.0
+Hamburg, Germany	64.7	27.6	48.2	62.2	64.2	132.5
+Toronto, Canada	64.3	42.0	54.4	68.9	68.9	121.9
+Cork, Ireland	64.3	38.9	53.0	65.1	68.3	110.6
+Frankfurt, Germany	64.2	31.4	49.6	60.4	66.9	143.2
+Las Vegas, NV, United States	64.2	37.0	52.1	68.1	73.1	147.8
+Lyon, France	64.2	21.4	45.1	75.3	61.4	114.4
+Tucson, AZ, United States	64.1	31.7	49.7	71.3	69.2	135.3
+Brighton, United Kingdom	64.1	41.0	53.8	63.1	65.4	102.2
+Wellington, New Zealand	64.0	35.0	51.1	71.8	59.2	93.7
+Madison, WI, United States	63.9	40.9	53.7	74.4	63.1	146.7
+Kelowna, Canada	63.8	31.8	49.6	77.2	61.9	89.3
+Heidelberg, Germany	63.6	28.3	47.9	64.4	60.4	139.7
+Dusseldorf, Germany	63.5	26.5	47.1	61.6	63.0	121.0
+Phoenix, AZ, United States	63.3	37.7	51.9	67.4	71.7	158.9
+Milan, Italy	63.2	35.8	51.0	64.4	65.5	73.8
+Darmstadt, Germany	63.0	29.3	48.0	63.0	62.0	125.5
+Calgary, Canada	62.8	32.2	49.2	73.2	62.1	128.2
+Brussels, Belgium	62.7	29.0	47.7	64.2	70.9	113.7
+Salt Lake City, UT, United States	62.7	38.4	51.9	69.5	65.7	159.0
+Stockholm, Sweden	62.5	32.1	49.0	60.2	64.0	135.8
+Maastricht, Netherlands	62.5	27.8	47.1	62.1	61.8	120.5
+Antwerp, Belgium	62.5	21.5	44.2	62.9	74.0	106.5
+Manchester, United Kingdom	62.4	32.6	49.2	61.2	69.0	120.0
+San Antonio, TX, United States	62.4	36.7	51.0	66.0	67.4	153.8
+Melbourne, Australia	62.3	34.5	49.9	71.5	59.1	155.6
+Vienna, Austria	62.2	26.5	46.3	66.0	60.7	110.2
+Bristol, United Kingdom	62.1	37.2	51.0	61.0	65.7	116.7
+Ottawa, Canada	62.1	32.2	48.8	70.6	64.7	119.8
+Stuttgart, Germany	62.0	27.6	46.7	62.7	62.1	132.8
+Austin, TX, United States	61.9	53.4	58.1	67.8	66.5	172.1
+Freiburg im Breisgau, Germany	61.8	24.9	45.4	64.2	56.7	141.8
+Utrecht, Netherlands	61.7	35.6	50.1	60.0	65.7	134.7
+Essen, Germany	61.7	17.1	41.9	61.1	55.8	136.2
+Rotterdam, Netherlands	61.7	35.6	50.1	60.7	67.7	132.9
+Halifax, Canada	61.6	33.1	48.9	72.7	60.2	97.6
+Graz, Austria	61.6	20.2	43.2	65.0	59.0	112.4
+Haifa, Israel	61.6	19.2	42.8	61.9	67.0	111.2
+Glasgow, United Kingdom	61.4	29.6	47.3	60.4	66.2	129.8
+Brisbane, Australia	61.4	34.8	49.6	69.6	60.3	146.3
+Houston, TX, United States	61.4	39.8	51.8	67.7	66.5	155.1
+Auckland, New Zealand	61.3	30.5	47.6	68.9	57.8	126.5
+Bonn, Germany	61.3	22.8	44.1	62.1	60.0	107.1
+Gent, Belgium	61.3	20.1	42.9	61.5	73.2	116.3
+Boise, ID, United States	61.2	35.7	49.9	67.6	67.4	155.3
+Berlin, Germany	61.2	30.6	47.6	58.5	59.0	124.2
+Karlsruhe, Germany	61.1	24.6	44.9	61.3	55.1	119.9
+Aberdeen, United Kingdom	61.1	21.1	43.3	60.5	63.8	160.3
+Almere, Netherlands	61.0	26.7	45.8	60.6	65.6	122.9
+Cologne, Germany	61.0	26.3	45.6	62.4	56.2	124.2
+Nuremberg, Germany	60.8	21.3	43.3	60.7	61.4	138.9
+Leiden, Netherlands	60.7	32.7	48.2	60.2	65.3	150.0
+Montreal, Canada	60.1	27.7	45.7	72.0	64.6	104.6
+Bremen, Germany	60.1	18.8	41.7	62.6	57.2	146.4
+Delft, Netherlands	59.9	32.7	47.8	62.4	62.0	112.8
+Quebec City, Canada	59.8	20.5	42.3	69.6	60.1	107.8
+Hanover, Germany	59.7	20.3	42.1	60.1	58.4	119.3
+Bologna, Italy	59.5	24.2	43.8	67.0	58.8	83.6
+Eindhoven, Netherlands	59.5	30.6	46.7	58.9	62.8	142.6
+Dortmund, Germany	59.5	19.9	41.9	61.2	57.3	112.0
+Montpellier, France	59.4	17.6	40.8	71.3	53.3	99.3
+Liverpool, United Kingdom	59.4	24.7	43.9	58.5	65.0	123.2
+Tampere, Finland	59.3	19.6	41.6	65.9	62.1	132.2
+Leeds, United Kingdom	58.9	27.8	45.1	58.7	63.3	131.4
+Erlangen, Germany	58.6	21.2	42.0	61.3	54.8	182.5
+The Hague (Den Haag), Netherlands	58.5	35.5	48.3	60.2	61.3	142.0
+Edmonton, Canada	58.4	25.1	43.6	69.3	54.9	122.6
+Dubai, United Arab Emirates	58.1	50.6	54.8	47.0	65.5	115.5
+Birmingham, United Kingdom	58.0	28.7	45.0	55.5	63.3	131.0
+Mississauga, Canada	57.9	39.9	49.9	62.3	55.9	122.3
+Aachen, Germany	57.8	18.2	40.2	59.5	54.5	141.9
+Mannheim, Germany	57.7	19.3	40.6	62.3	49.0	183.3
+Leipzig, Germany	57.5	17.7	39.8	63.0	52.3	126.0
+Newcastle upon Tyne, United Kingdom	57.3	22.5	41.8	56.3	63.8	165.6
+Christchurch, New Zealand	57.3	27.6	44.1	69.4	63.2	123.0
+Sheffield, United Kingdom	57.2	25.1	42.9	55.5	60.7	128.0
+Winnipeg, Canada	57.1	23.3	42.1	67.6	57.9	109.0
+Macao, Macao (China)	56.9	26.9	43.6	70.6	39.7	105.6
+Malmo, Sweden	56.6	20.0	40.3	63.7	57.3	128.4
+Dresden, Germany	56.4	18.0	39.3	58.2	53.6	138.1
+Gothenburg, Sweden	56.4	21.8	41.0	59.2	58.6	142.8
+Belfast, United Kingdom	55.8	24.5	41.9	56.5	67.7	123.6
+London, Canada	55.4	32.6	45.3	63.4	57.8	115.4
+Groningen, Netherlands	55.4	22.0	40.5	58.4	62.6	147.9
+Limassol, Cyprus	55.1	35.4	46.4	51.2	62.7	94.7
+Leuven, Belgium	54.7	23.0	40.6	53.7	60.0	119.0
+Kingston, Jamaica	54.5	22.8	40.4	66.6	47.8	34.5
+Padova, Italy	54.2	21.8	39.8	56.0	55.3	78.8
+Verona, Italy	53.6	20.8	39.0	54.0	56.8	81.1
+Tokyo, Japan	53.5	27.1	41.8	65.7	36.2	104.9
+Tallinn, Estonia	53.4	16.6	37.0	49.6	59.9	81.9
+Abu Dhabi, United Arab Emirates	53.4	35.5	45.4	45.5	61.6	151.2
+Sliema, Malta	53.1	29.4	42.6	54.4	59.5	75.7
+Port of Spain, Trinidad And Tobago	52.9	16.7	36.8	60.4	50.6	40.8
+Barcelona, Spain	52.7	29.5	42.4	53.5	55.9	92.8
+Turin, Italy	52.3	16.5	36.4	58.1	52.7	96.1
+Rome, Italy	51.7	26.4	40.4	53.6	52.7	86.6
+San Jose, Costa Rica	51.3	17.7	36.4	60.0	48.0	48.5
+Naples, Italy	50.7	20.4	37.2	51.6	50.2	62.0
+Madrid, Spain	50.0	31.7	41.9	49.5	53.5	107.8
+Athens, Greece	49.2	15.9	34.4	49.4	52.1	58.8
+Ljubljana, Slovenia	48.9	23.0	37.4	49.4	48.6	82.5
+Kampala, Uganda	48.8	10.5	31.8	29.7	26.8	9.9
+Bari, Italy	48.7	16.4	34.3	51.6	50.5	89.8
+Doha, Qatar	48.5	34.3	42.2	43.6	49.5	146.0
+Nicosia, Cyprus	48.4	18.0	34.9	48.5	47.8	82.3
+Thessaloniki, Greece	48.3	11.8	32.0	48.1	50.8	57.4
+Montevideo, Uruguay	47.9	12.6	32.2	49.6	47.8	63.0
+Taipei, Taiwan	47.8	17.9	34.5	63.0	28.1	94.4
+Sharjah, United Arab Emirates	47.7	21.7	36.1	38.0	39.1	115.1
+Prague, Czech Republic	47.5	25.4	37.7	44.6	41.5	91.1
+Split, Croatia	47.4	18.6	34.6	44.6	54.4	63.1
+Tartu, Estonia	47.3	12.8	31.9	44.0	50.4	86.4
+Manama, Bahrain	46.8	19.7	34.7	44.8	47.0	110.2
+Lisbon, Portugal	46.7	34.3	41.2	45.5	47.0	61.3
+Bratislava, Slovakia	46.7	17.6	33.7	47.2	42.2	79.9
+Riyadh, Saudi Arabia	46.4	23.9	36.4	44.8	40.5	140.2
+Riga, Latvia	46.3	11.8	31.0	43.3	46.5	79.8
+Vilnius, Lithuania	46.0	17.9	33.5	43.3	50.1	87.0
+Panama City, Panama	45.9	26.3	37.2	52.4	49.4	44.9
+Addis Ababa, Ethiopia	44.7	16.5	32.1	51.0	23.7	13.3
+Vigo, Spain	44.4	15.4	31.5	46.5	41.5	98.7
+Seville (Sevilla), Spain	43.9	19.2	32.9	48.5	39.9	111.0
+Yerevan, Armenia	43.5	19.8	32.9	38.4	47.5	32.3
+Zagreb, Croatia	43.4	16.8	31.6	43.2	43.5	94.0
+Kaunas, Lithuania	43.4	13.7	30.2	44.0	42.8	83.1
+Jeddah (Jiddah), Saudi Arabia	43.3	11.2	29.0	41.1	37.9	138.2
+Valencia, Spain	42.9	24.5	34.7	43.8	46.3	101.4
+Malaga, Spain	42.9	24.8	34.8	41.4	43.8	91.8
+Tirana, Albania	42.8	13.4	29.7	46.1	40.6	44.5
+Warsaw, Poland	42.8	25.2	34.9	37.1	42.9	98.2
+Kuwait City, Kuwait	42.7	22.4	33.7	35.1	48.7	122.7
+Brno, Czech Republic	42.7	17.6	31.5	42.5	33.7	93.7
+Beirut, Lebanon	42.5	17.3	31.3	35.2	40.8	30.5
+Porto, Portugal	42.4	26.0	35.1	42.5	40.0	65.0
+Ad Dammam, Saudi Arabia	42.2	9.5	27.7	41.9	36.0	157.1
+Budva, Montenegro	42.1	21.7	33.0	38.7	45.7	44.9
+Krakow (Cracow), Poland	42.1	19.5	32.1	38.1	43.1	106.1
+Plzen, Czech Republic	42.0	12.1	28.7	44.2	33.8	102.6
+Monterrey, Mexico	42.0	20.4	32.4	46.4	42.5	56.0
+Suzhou, China	41.8	11.3	28.3	50.6	34.5	69.0
+Gaborone, Botswana	41.8	6.1	25.9	30.7	26.2	28.9
+Santo Domingo, Dominican Republic	41.5	16.9	30.6	44.7	38.9	32.8
+Ostrava, Czech Republic	41.3	12.7	28.6	43.1	34.7	88.2
+Wroclaw, Poland	40.7	18.2	30.6	37.9	41.0	89.2
+Coimbra, Portugal	40.5	17.2	30.1	42.6	35.5	72.6
+Belgrade, Serbia	40.4	17.9	30.4	38.8	41.2	57.6
+Muscat, Oman	40.3	14.3	28.7	38.4	40.8	114.1
+Braga, Portugal	40.2	18.2	30.4	41.2	38.1	65.6
+Gdansk, Poland	40.1	17.4	30.0	36.5	40.4	97.3
+Santiago, Chile	40.0	12.8	27.9	44.0	44.4	50.5
+Shanghai, China	40.0	26.8	34.1	41.0	27.2	95.4
+Katowice, Poland	40.0	13.4	28.1	40.8	39.6	93.7
+Amman, Jordan	39.8	9.3	26.3	38.0	40.4	49.5
+San Salvador, El Salvador	39.7	18.8	30.4	45.4	36.3	27.8
+Guatemala City, Guatemala	39.7	14.5	28.5	47.3	35.5	29.4
+Bucharest, Romania	39.5	13.1	27.7	39.2	44.2	79.7
+Sofia, Bulgaria	39.4	13.6	27.9	41.9	38.4	92.4
+Istanbul, Turkey	39.4	20.0	30.8	39.5	42.4	51.8
+Budapest, Hungary	39.4	14.3	28.2	38.5	39.6	78.1
+Bangkok, Thailand	38.6	16.1	28.6	47.1	23.7	44.9
+Constanta, Romania	38.6	11.5	26.6	39.3	38.6	49.4
+Lodz, Poland	38.4	12.9	27.0	34.2	37.7	87.7
+Poznan, Poland	38.3	15.7	28.3	36.6	37.1	93.8
+Mexico City, Mexico	38.1	21.5	30.7	44.2	39.6	43.2
+Beijing, China	37.7	22.2	30.8	37.0	25.3	100.7
+Phnom Penh, Cambodia	37.7	11.9	26.2	46.2	27.5	26.1
+Kigali, Rwanda	37.6	10.6	25.6	25.7	22.8	18.0
+Harare, Zimbabwe	37.6	10.7	25.6	36.6	38.6	29.2
+Novi Sad, Serbia	37.5	13.1	26.6	38.0	36.3	53.8
+Cluj-Napoca, Romania	37.3	13.5	26.7	38.0	41.6	82.8
+Shenzhen, China	37.0	18.4	28.7	41.0	24.1	103.9
+Szczecin, Poland	36.9	14.5	26.9	35.4	37.3	96.1
+Johannesburg, South Africa	36.7	11.4	25.4	33.1	36.0	119.7
+Merida, Mexico	36.5	13.3	26.2	41.1	38.9	39.6
+Podgorica, Montenegro	36.4	13.6	26.2	38.2	34.5	61.9
+Brasov, Romania	36.4	11.6	25.3	37.5	38.7	66.0
+Varna, Bulgaria	36.2	11.1	25.0	37.4	37.4	64.2
+Antalya, Turkey	36.0	13.9	26.1	36.2	37.8	39.0
+Tijuana, Mexico	35.8	15.9	26.9	38.4	38.6	56.3
+Queretaro (Santiago de Querétaro), Mexico	35.8	13.0	25.7	44.0	34.8	69.1
+Guayaquil, Ecuador	35.4	8.0	23.2	37.4	31.6	41.8
+Manila, Philippines	35.1	14.6	26.0	43.9	24.7	38.0
+Izmir, Turkey	35.1	11.8	24.8	38.1	32.0	50.9
+Buenos Aires, Argentina	35.0	12.7	25.1	38.3	39.1	34.2
+Colombo, Sri Lanka	35.0	9.0	23.4	53.0	24.5	18.1
+Guadalajara, Mexico	35.0	14.7	26.0	40.7	35.7	47.8
+Guangzhou, China	35.0	12.8	25.1	43.5	21.7	91.4
+Tbilisi, Georgia	34.9	16.1	26.5	35.3	39.1	41.1
+Oradea, Romania	34.8	7.6	22.7	36.1	38.2	58.0
+Timisoara, Romania	34.8	8.8	23.3	35.6	37.3	83.2
+Suva, Fiji	34.8	16.7	26.7	48.1	32.2	61.7
+Ankara, Turkey	34.8	12.8	25.0	37.0	34.4	54.9
+Burgas, Bulgaria	34.7	9.6	23.6	38.4	35.2	67.0
+Banja Luka, Bosnia And Herzegovina	34.4	7.0	22.2	36.2	29.2	59.1
+Debrecen, Hungary	34.4	9.9	23.5	35.8	31.3	69.3
+Cape Town, South Africa	34.1	19.2	27.5	33.2	32.1	111.4
+Iasi, Romania	34.1	8.9	22.9	35.2	34.4	69.4
+Pretoria, South Africa	33.8	10.9	23.7	32.6	29.8	133.0
+Kuala Lumpur, Malaysia	33.7	12.4	24.2	42.8	26.0	105.1
+Plovdiv, Bulgaria	33.6	9.1	22.7	37.5	32.1	75.6
+Hangzhou, China	33.5	12.1	24.0	41.0	22.4	85.7
+Puebla, Mexico	33.4	11.9	23.9	38.8	30.8	46.5
+Pattaya, Thailand	33.4	12.6	24.2	44.6	24.1	33.9
+Sarajevo, Bosnia And Herzegovina	33.3	8.1	22.1	34.8	25.3	65.4
+Moscow, Russia	33.1	21.9	28.1	30.5	32.7	85.9
+Sibiu, Romania	33.1	8.4	22.1	33.6	34.4	75.7
+Ulaanbaatar, Mongolia	32.9	15.4	25.1	42.4	24.6	29.6
+Quito, Ecuador	32.9	10.7	23.0	39.0	30.9	48.6
+Chisinau, Moldova	32.5	12.6	23.7	31.7	27.5	48.5
+Erbil (Irbil), Iraq	32.5	10.3	22.6	32.7	30.4	48.1
+Skopje, North Macedonia	32.1	7.5	21.2	33.0	26.3	60.4
+Lima, Peru	32.1	12.7	23.4	37.1	27.4	37.1
+Sao Paulo, Brazil	32.0	13.4	23.8	33.4	31.3	36.7
+Casablanca, Morocco	32.0	10.9	22.6	33.7	26.7	39.8
+Bursa, Turkey	31.8	9.7	22.0	34.6	31.6	60.4
+Nis, Serbia	31.5	7.2	20.7	32.7	27.2	60.7
+Durban, South Africa	31.4	9.7	21.8	29.1	25.6	98.9
+Accra, Ghana	31.4	11.8	22.7	36.4	30.3	14.6
+Baku, Azerbaijan	31.2	10.0	21.8	30.7	35.2	43.0
+Baghdad, Iraq	31.1	10.5	21.9	30.6	30.1	44.1
+Rabat, Morocco	30.9	11.2	22.1	33.5	28.0	50.8
+Lagos, Nigeria	30.8	22.9	27.3	38.5	27.5	11.7
+Rio de Janeiro, Brazil	30.3	10.5	21.5	30.1	26.6	30.0
+Mersin, Turkey	30.0	9.2	20.7	32.2	25.8	55.5
+Batumi, Ajara, Georgia	29.9	12.1	22.0	34.1	31.5	41.7
+Nairobi, Kenya	29.7	9.9	20.9	34.0	24.7	34.7
+Chiang Mai, Thailand	29.6	8.7	20.3	39.3	19.1	60.2
+Brasilia, Brazil	29.5	9.8	20.7	29.9	27.9	42.0
+Wuhan, China	29.3	8.7	20.1	34.3	21.3	83.4
+Saint Petersburg, Russia	29.3	12.9	22.0	28.5	27.5	68.6
+Florianopolis, Brazil	29.2	10.6	21.0	28.2	26.2	50.7
+Almaty, Kazakhstan	29.2	14.7	22.8	30.8	28.6	52.8
+Chengdu, China	29.1	6.8	19.2	36.3	21.5	83.8
+Jakarta, Indonesia	29.1	12.7	21.8	38.0	18.8	47.6
+Cuenca, Ecuador	29.1	9.0	20.2	32.0	26.7	45.2
+Campinas, Brazil	28.8	8.8	19.9	31.1	26.3	52.8
+Ho Chi Minh City, Vietnam	28.7	12.0	21.3	34.4	17.9	40.4
+Astana (Nur-Sultan), Kazakhstan	28.6	10.6	20.6	30.5	30.8	51.6
+Porto Alegre, Brazil	28.5	7.9	19.3	29.5	23.8	43.4
+Fortaleza, Brazil	28.3	5.6	18.2	28.7	25.8	22.5
+Hanoi, Vietnam	27.8	9.8	19.8	34.4	17.6	46.0
+Kiev (Kyiv), Ukraine	27.7	12.5	21.0	27.7	27.0	47.1
+Tunis, Tunisia	27.6	5.4	17.7	34.4	18.7	34.4
+Belo Horizonte, Brazil	27.5	8.0	18.8	28.0	23.9	36.0
+Medellin, Colombia	27.4	10.7	19.9	30.0	23.7	35.8
+Tehran, Iran	27.3	12.4	20.7	24.5	19.0	25.4
+Dar es Salaam, Tanzania	27.2	12.8	20.8	28.1	19.4	26.4
+Vladivostok, Russia	27.1	10.4	19.7	29.3	25.1	55.6
+Algiers, Algeria	26.7	4.7	16.9	36.2	16.1	34.7
+Bishkek, Kyrgyzstan	26.7	10.8	19.6	29.7	21.3	35.0
+Curitiba, Brazil	26.6	8.0	18.4	27.2	23.8	44.2
+Dnipro, Ukraine	26.4	11.3	19.7	25.9	27.9	39.3
+Sao Jose dos Campos, Brazil	26.4	8.6	18.5	28.8	22.8	60.4
+Minsk, Belarus	26.1	9.9	18.9	26.9	27.8	64.5
+Pristina, Kosovo (Disputed Territory)	25.9	7.8	17.9	27.3	22.9	54.7
+Bogota, Colombia	25.9	9.2	18.4	28.3	22.7	32.2
+Mumbai, India	25.8	18.1	22.3	26.0	23.1	79.0
+Cali, Colombia	25.6	5.8	16.8	29.4	20.9	43.2
+Yekaterinburg, Russia	25.6	9.5	18.4	26.0	24.3	55.8
+Tashkent, Uzbekistan	25.6	14.7	20.7	28.3	21.9	43.2
+Odessa (Odesa), Ukraine	25.5	5.7	16.7	26.9	23.6	45.9
+Samara, Russia	25.5	6.1	16.8	24.0	27.1	48.0
+Nizhny Novgorod, Russia	25.5	7.8	17.6	25.6	25.0	53.0
+Recife, Brazil	25.5	7.2	17.3	27.3	20.9	56.6
+Kazan, Russia	24.9	9.0	17.8	24.1	23.3	58.4
+Krasnodar, Russia	24.9	7.9	17.3	23.6	25.8	54.4
+Gurgaon, India	24.8	8.4	17.5	29.0	23.7	139.8
+Novosibirsk, Russia	24.7	7.7	17.2	26.4	23.5	57.1
+Ufa, Russia	24.6	5.7	16.2	24.5	23.8	56.6
+Kathmandu, Nepal	24.6	3.8	15.4	26.5	19.6	27.9
+Kaliningrad, Russia	24.4	7.0	16.7	24.7	25.0	48.9
+Rostov-on-Don (Rostov-na-donu), Russia	24.3	7.2	16.6	23.5	23.6	61.5
+Kharkiv, Ukraine	24.3	5.0	15.7	24.7	22.5	45.7
+Lviv, Ukraine	24.2	10.1	17.9	25.8	20.6	52.1
+Bangalore, India	23.6	8.7	17.0	28.5	20.4	126.5
+Asuncion, Paraguay	23.2	9.9	17.3	24.3	20.5	45.2
+Dhaka, Bangladesh	23.1	3.1	14.2	29.4	17.4	37.4
+Perm, Russia	22.9	7.1	15.9	23.7	23.3	59.3
+Pune, India	22.8	6.3	15.5	25.8	23.7	160.3
+Noida, India	22.5	5.2	14.8	26.7	19.1	122.4
+Delhi, India	22.2	7.7	15.7	24.3	20.3	108.6
+Hyderabad, India	21.9	6.3	14.9	26.1	19.7	125.8
+Ahmedabad, India	21.8	4.5	14.1	27.4	19.1	68.1
+Chelyabinsk, Russia	21.2	6.5	14.7	22.6	20.7	55.9
+Chennai, India	21.1	5.1	14.0	26.8	15.3	114.8
+Tripoli, Libya	20.7	5.1	13.8	23.8	18.5	42.4
+Chandigarh, India	20.3	4.6	13.3	22.6	15.6	92.2
+Vadodara, India	20.3	3.5	12.8	25.9	15.9	79.8
+Islamabad, Pakistan	20.3	5.1	13.5	19.7	16.9	35.2
+Cairo, Egypt	20.0	4.8	13.3	21.1	18.8	21.9
+Bhubaneswar, India	19.9	3.6	12.6	23.5	14.9	74.4
+Kolkata, India	19.9	3.6	12.6	25.0	16.5	69.7
+Surat, India	19.4	11.9	16.1	25.4	15.7	51.6
+Jaipur, India	19.3	4.0	12.5	22.8	14.4	86.1
+Kochi, India	19.2	4.8	12.8	23.8	13.0	83.2
+Bhopal, India	19.1	3.4	12.1	24.9	14.0	69.8
+Indore, India	18.7	4.3	12.3	23.4	15.4	76.2
+Alexandria, Egypt	18.7	2.5	11.5	21.4	16.3	18.8
+Lucknow (Lakhnau), India	18.6	4.0	12.1	20.3	14.7	65.8
+Karachi, Pakistan	18.5	2.9	11.6	18.1	16.0	28.1
+Lahore, Pakistan	18.4	3.3	11.7	17.1	17.6	28.2
+Coimbatore, India	17.9	3.7	11.6	24.7	13.3	62.9
