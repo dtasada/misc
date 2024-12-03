@@ -1,0 +1,5 @@
+day 1-5:	Lua
+day 6-10:	Rust
+day 11-15:	Perl
+day 16-20:	Swift
+day 21-24:	Go

@@ -22,7 +22,7 @@ local function main()
 
 	local p1 = 0
 	for i = 1, #left do
-		p1 = p1 + require("math").abs(right[i] - left[i])
+		p1 = p1 + math.abs(right[i] - left[i])
 	end
 	print("p1", p1)
 
