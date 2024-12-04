@@ -22,4 +22,17 @@ function pretty.print(table, indent)
 	print(spacing .. "}")
 end
 
+function pretty.table(tbl, indent)
+	indent = indent or 0
+	local formatting = string.rep("  ", indent) -- Create indentation
+	for key, value in pairs(tbl) do
+		if type(value) == "table" then
+			print(formatting .. tostring(key) .. ":")
+			pretty.table(value, indent + 1)
+		else
+			print(formatting .. tostring(key) .. " = " .. tostring(value))
+		end
+	end
+end
+
 return pretty
