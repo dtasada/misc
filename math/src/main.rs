@@ -14,6 +14,29 @@ use std::{
 mod lexer;
 use lexer::{lexer::*, tokens::*};
 
+macro_rules! col0 {
+    () => {
+        io::stdout().execute(cursor::MoveToColumn(0))?;
+    };
+}
+
+macro_rules! print0 {
+    ($($arg:tt)*) => {{
+        col0!();
+        print!("{}", format!($($arg)*))
+    }};
+}
+macro_rules! println0 {
+    () => {
+        col0!();
+        print!("\n")
+    };
+    ($($arg:tt)*) => {{
+        col0!();
+        println!("{}", format!($($arg)*))
+    }};
+}
+
 fn print_prompt(stdout: &mut io::Stdout) -> io::Result<()> {
     print_colored(">>> ", Color::Cyan)?;
     stdout.flush()?;
@@ -23,27 +46,29 @@ fn print_prompt(stdout: &mut io::Stdout) -> io::Result<()> {
 fn print_colored(text: &str, color: Color) -> io::Result<()> {
     let mut stdout = io::stdout();
     stdout.execute(crossterm::style::SetForegroundColor(color))?;
-    print!("{}", text);
+    print0!("{}", text);
     stdout.execute(crossterm::style::ResetColor)?;
+    stdout.flush()?;
     Ok(())
 }
 
 fn execute_command(command: &str) -> String {
     let tokens = Lexer::new(command.to_string()).tokenize();
 
-    let token_str: String = tokens.iter().map(|token| format!("{:?} ", token)).collect();
+    let token_str = tokens
+        .iter()
+        .map(|token| format!("{:?} ", token))
+        .collect::<String>();
 
     format!("{}\nCommand executed", token_str)
 }
 
 fn main() -> io::Result<()> {
-    // Enable raw mode
     terminal::enable_raw_mode()?;
 
-    // Ensure terminal is restored to original state on panic or exit
     let mut stdout = io::stdout();
 
-    println!("Math REPL");
+    println0!("Math REPL");
 
     let mut history = Vec::<String>::new();
     let mut history_index = 0;
@@ -51,7 +76,6 @@ fn main() -> io::Result<()> {
     let mut cursor_position = 0usize;
 
     loop {
-        stdout.execute(cursor::MoveToColumn(0))?;
         stdout.execute(terminal::Clear(ClearType::CurrentLine))?;
         print_prompt(&mut stdout)?;
 
@@ -64,15 +88,35 @@ fn main() -> io::Result<()> {
             if let Event::Key(key_event) = event::read()? {
                 match (key_event.code, key_event.modifiers) {
                     (KeyCode::Char('d'), KeyModifiers::CONTROL) => {
-                        println!("");
-                        print_colored("Exited Math REPL", Color::Green)?;
+                        println0!("");
+                        print_colored("Exited Math REPL\r\n", Color::Green)?;
                         break;
                     }
 
-                    // Exit command
-                    (KeyCode::Char('q'), KeyModifiers::CONTROL) if input == "exit" => {
-                        print_colored("Exited Math REPL", Color::Green)?;
-                        break;
+                    (KeyCode::Char('c'), KeyModifiers::CONTROL) => {
+                        println0!(); // Move to next line
+                        input.clear();
+                    }
+
+                    (KeyCode::Char('a'), KeyModifiers::CONTROL) => cursor_position = 0,
+
+                    (KeyCode::Char('e'), KeyModifiers::CONTROL) => cursor_position = input.len(),
+
+                    (KeyCode::Char('w'), KeyModifiers::CONTROL) => {
+                        input = {
+                            let mut ret = String::new();
+
+                            if let Some(pos) = input.rfind(|c: char| !c.is_whitespace()) {
+                                let trimmed = &input[..=pos];
+                                if let Some(last_space) = trimmed.rfind(char::is_whitespace) {
+                                    ret = input[..=last_space].to_string();
+                                }
+                            }
+
+                            ret
+                        };
+
+                        cursor_position = input.len();
                     }
 
                     // Enter key
@@ -82,7 +126,11 @@ fn main() -> io::Result<()> {
                         if !input.is_empty() {
                             history.push(input.clone());
 
-                            stdout.execute(cursor::MoveToColumn(0))?;
+                            if input == "exit" {
+                                print_colored("Exited Math REPL", Color::Green)?;
+                                break;
+                            }
+
                             let output = execute_command(&input);
 
                             print_colored(&output, Color::Blue)?;
@@ -90,6 +138,8 @@ fn main() -> io::Result<()> {
                             input.clear();
                             cursor_position = 0;
                             history_index = 0;
+
+                            col0!();
                         }
                     }
 
@@ -103,23 +153,19 @@ fn main() -> io::Result<()> {
 
                     // Up arrow (history navigation)
                     (KeyCode::Up, _) => {
-                        println!("Up key pressed");
-                        println!("history_index: {}", history_index);
                         if let Some(last_command) = history.last() {
-                            println!("last_command: {}", last_command);
                             input = last_command.clone();
                             cursor_position = input.len();
-                            history_index = (history_index + 1).max(history.len());
+                            history_index = (history_index + 1).min(history.len());
                         }
                     }
 
                     (KeyCode::Down, _) => {
-                        println!("Down key pressed");
-                        println!("history_index  1: {}", history_index);
-                        input = history[history.len() - 1 - history_index].clone();
+                        input = history
+                            [(history.len() as isize - 1 - history_index as isize).max(0) as usize]
+                            .clone();
                         cursor_position = input.len();
                         history_index = (history_index as isize - 1).max(0) as usize;
-                        println!("history_index  2: {}", history_index);
                     }
 
                     // Character input
