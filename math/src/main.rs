@@ -1,18 +1,18 @@
 use crossterm::{
     cursor,
-    event::{self, Event, KeyCode, KeyEvent, KeyModifiers},
-    execute,
-    style::{Color, PrintStyledContent, StyledContent},
+    event::{self, Event, KeyCode, KeyModifiers},
+    style::Color,
     terminal::{self, ClearType},
     ExecutableCommand,
 };
 use std::{
     io::{self, Write},
     time::Duration,
+    usize,
 };
 
 mod lexer;
-use lexer::{lexer::*, tokens::*};
+use lexer::lexer::*;
 
 macro_rules! col0 {
     () => {
@@ -37,9 +37,9 @@ macro_rules! println0 {
     }};
 }
 
-fn print_prompt(stdout: &mut io::Stdout) -> io::Result<()> {
+fn print_prompt() -> io::Result<()> {
     print_colored(">>> ", Color::Cyan)?;
-    stdout.flush()?;
+    io::stdout().flush()?;
     Ok(())
 }
 
@@ -65,19 +65,20 @@ fn execute_command(command: &str) -> String {
 
 fn main() -> io::Result<()> {
     terminal::enable_raw_mode()?;
+    std::panic::set_hook(Box::new(|_| terminal::disable_raw_mode().unwrap()));
 
     let mut stdout = io::stdout();
 
     println0!("Math REPL");
 
-    let mut history = Vec::<String>::new();
-    let mut history_index = 0;
     let mut input = String::new();
-    let mut cursor_position = 0usize;
+    let mut history = Vec::<String>::new();
+    let mut history_index: usize = 0;
+    let mut cursor_position: usize = 0;
 
     loop {
         stdout.execute(terminal::Clear(ClearType::CurrentLine))?;
-        print_prompt(&mut stdout)?;
+        print_prompt()?;
 
         // Print current input
         print!("{}", input);
@@ -88,7 +89,7 @@ fn main() -> io::Result<()> {
             if let Event::Key(key_event) = event::read()? {
                 match (key_event.code, key_event.modifiers) {
                     (KeyCode::Char('d'), KeyModifiers::CONTROL) => {
-                        println0!("");
+                        println0!();
                         print_colored("Exited Math REPL\r\n", Color::Green)?;
                         break;
                     }
@@ -97,11 +98,8 @@ fn main() -> io::Result<()> {
                         println0!(); // Move to next line
                         input.clear();
                     }
-
                     (KeyCode::Char('a'), KeyModifiers::CONTROL) => cursor_position = 0,
-
                     (KeyCode::Char('e'), KeyModifiers::CONTROL) => cursor_position = input.len(),
-
                     (KeyCode::Char('w'), KeyModifiers::CONTROL) => {
                         input = {
                             let mut ret = String::new();
@@ -121,15 +119,16 @@ fn main() -> io::Result<()> {
 
                     // Enter key
                     (KeyCode::Enter, _) => {
-                        println!(); // Move to next line
+                        if input == "exit" {
+                            println0!();
+                            print_colored("Exited Math REPL\r\n", Color::Green)?;
+                            break;
+                        }
+
+                        println0!(); // Move to next line
 
                         if !input.is_empty() {
                             history.push(input.clone());
-
-                            if input == "exit" {
-                                print_colored("Exited Math REPL", Color::Green)?;
-                                break;
-                            }
 
                             let output = execute_command(&input);
 
@@ -161,11 +160,13 @@ fn main() -> io::Result<()> {
                     }
 
                     (KeyCode::Down, _) => {
-                        input = history
-                            [(history.len() as isize - 1 - history_index as isize).max(0) as usize]
-                            .clone();
+                        input = history[history
+                            .len()
+                            .saturating_sub(1)
+                            .saturating_sub(history_index)]
+                        .clone();
                         cursor_position = input.len();
-                        history_index = (history_index as isize - 1).max(0) as usize;
+                        history_index = history_index.saturating_sub(1);
                     }
 
                     // Character input
