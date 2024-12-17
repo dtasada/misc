@@ -1,9 +1,9 @@
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Clone)]
 pub enum Token {
-    Identifier(String), // contains the name of the identifier
-    Number(f64),        // contains value of the number
-    Whitespace(usize),  // contains length of contiguous whitespace
-    InvalidNumber,
+    Ident(String),     // contains the name of the identifier
+    Number(f64),       // contains value of the number
+    Whitespace(usize), // contains length of contiguous whitespace
+    Unknown(String),   // contains the unknown token
     Plus,
     Minus,
     Asterisk,
@@ -23,17 +23,11 @@ pub enum Token {
     BangEquals,
     PlusPlus,
     MinusMinus,
-    PlusMinus,
     GreaterThan,
     LessThan,
     GreaterEquals,
     LessEquals,
     LeftParen,
     RightParen,
-    Unknown,
     EOL,
 }
-
-pub const SPECIAL_CHARS: [char; 13] = [
-    '+', '-', '*', '/', '%', '^', '(', ')', '!', '=', '|', '>', '<',
-];

@@ -6,17 +6,17 @@ use crossterm::{
     ExecutableCommand,
 };
 use std::{
-    io::{self, Write},
+    io::{self, Error, ErrorKind, Result, Write},
     time::Duration,
     usize,
 };
 
-mod lexer;
-use lexer::lexer::*;
+mod lang;
+use lang::{lexer::*, parser::*, tokens::*};
 
 macro_rules! col0 {
     () => {
-        io::stdout().execute(cursor::MoveToColumn(0))?;
+        io::stdout().execute(cursor::MoveToColumn(0)).unwrap();
     };
 }
 
@@ -37,13 +37,13 @@ macro_rules! println0 {
     }};
 }
 
-fn print_prompt() -> io::Result<()> {
+fn print_prompt() -> Result<()> {
     print_colored(">>> ", Color::Cyan)?;
     io::stdout().flush()?;
     Ok(())
 }
 
-fn print_colored(text: &str, color: Color) -> io::Result<()> {
+fn print_colored(text: &str, color: Color) -> Result<()> {
     let mut stdout = io::stdout();
     stdout.execute(crossterm::style::SetForegroundColor(color))?;
     print0!("{}", text);
@@ -52,18 +52,23 @@ fn print_colored(text: &str, color: Color) -> io::Result<()> {
     Ok(())
 }
 
-fn execute_command(command: &str) -> String {
+fn execute_command(command: &str) -> Result<String> {
     let tokens = Lexer::new(command.to_string()).tokenize();
+    for t in &tokens {
+        if let Token::Unknown(token) = t {
+            return Err(Error::new(
+                ErrorKind::NotFound,
+                format!("Error: unkown token {:?}\n", token),
+            ));
+        }
+    }
 
-    let token_str = tokens
-        .iter()
-        .map(|token| format!("{:?} ", token))
-        .collect::<String>();
+    let tree = Parser::new(tokens.clone()).parse();
 
-    format!("{}\nCommand executed", token_str)
+    Ok(format!("tokens: {:?}\r\ntree: {:?}\n", tokens, tree))
 }
 
-fn main() -> io::Result<()> {
+fn main() -> Result<()> {
     terminal::enable_raw_mode()?;
     std::panic::set_hook(Box::new(|_| terminal::disable_raw_mode().unwrap()));
 
@@ -74,17 +79,16 @@ fn main() -> io::Result<()> {
     let mut input = String::new();
     let mut history = Vec::<String>::new();
     let mut history_index: usize = 0;
-    let mut cursor_position: usize = 0;
+    let mut cursor_col: usize = 0;
+    let mut cursor_row: usize = 0;
 
     loop {
         stdout.execute(terminal::Clear(ClearType::CurrentLine))?;
         print_prompt()?;
 
-        // Print current input
         print!("{}", input);
         stdout.flush()?;
 
-        // Wait for key event
         if event::poll(Duration::from_millis(100))? {
             if let Event::Key(key_event) = event::read()? {
                 match (key_event.code, key_event.modifiers) {
@@ -98,8 +102,8 @@ fn main() -> io::Result<()> {
                         println0!(); // Move to next line
                         input.clear();
                     }
-                    (KeyCode::Char('a'), KeyModifiers::CONTROL) => cursor_position = 0,
-                    (KeyCode::Char('e'), KeyModifiers::CONTROL) => cursor_position = input.len(),
+                    (KeyCode::Char('a'), KeyModifiers::CONTROL) => cursor_col = 0,
+                    (KeyCode::Char('e'), KeyModifiers::CONTROL) => cursor_col = input.len(),
                     (KeyCode::Char('w'), KeyModifiers::CONTROL) => {
                         input = {
                             let mut ret = String::new();
@@ -114,10 +118,9 @@ fn main() -> io::Result<()> {
                             ret
                         };
 
-                        cursor_position = input.len();
+                        cursor_col = input.len();
                     }
 
-                    // Enter key
                     (KeyCode::Enter, _) => {
                         if input == "exit" {
                             println0!();
@@ -132,10 +135,13 @@ fn main() -> io::Result<()> {
 
                             let output = execute_command(&input);
 
-                            print_colored(&output, Color::Blue)?;
+                            match output {
+                                Ok(output) => print_colored(&output, Color::Blue)?,
+                                Err(e) => print_colored(&e.to_string(), Color::Red)?,
+                            }
 
                             input.clear();
-                            cursor_position = 0;
+                            cursor_col = 0;
                             history_index = 0;
 
                             col0!();
@@ -144,17 +150,16 @@ fn main() -> io::Result<()> {
 
                     // Backspace
                     (KeyCode::Backspace, _) => {
-                        if !input.is_empty() && cursor_position > 0 {
-                            input.remove(cursor_position - 1);
-                            cursor_position -= 1;
+                        if !input.is_empty() && cursor_col > 0 {
+                            input.remove(cursor_col - 1);
+                            cursor_col -= 1;
                         }
                     }
 
-                    // Up arrow (history navigation)
                     (KeyCode::Up, _) => {
                         if let Some(last_command) = history.last() {
                             input = last_command.clone();
-                            cursor_position = input.len();
+                            cursor_col = input.len();
                             history_index = (history_index + 1).min(history.len());
                         }
                     }
@@ -165,14 +170,33 @@ fn main() -> io::Result<()> {
                             .saturating_sub(1)
                             .saturating_sub(history_index)]
                         .clone();
-                        cursor_position = input.len();
+                        cursor_col = input.len();
                         history_index = history_index.saturating_sub(1);
                     }
 
+                    (KeyCode::Left, _) => {
+                        if cursor_col > 0 {
+                            cursor_col -= 1;
+                        }
+                        io::stdout().execute(cursor::MoveToColumn(0))?;
+                        print!("{}\r", input);
+                        io::stdout().execute(cursor::MoveToColumn(cursor_col as u16))?;
+                        io::stdout().flush()?;
+                    }
+
+                    (KeyCode::Right, _) => {
+                        if cursor_col < input.len() {
+                            cursor_col += 1;
+                        }
+                        io::stdout().execute(cursor::MoveToColumn(0))?;
+                        print!("{}\r", input);
+                        io::stdout().execute(cursor::MoveToColumn(cursor_col as u16))?;
+                        io::stdout().flush()?;
+                    }
                     // Character input
                     (KeyCode::Char(c), _) => {
-                        input.insert(cursor_position, c);
-                        cursor_position += 1;
+                        input.insert(cursor_col, c);
+                        cursor_col += 1;
                     }
 
                     _ => {} // Ignore other keys
