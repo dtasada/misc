@@ -69,8 +69,17 @@ impl Parser {
             Token::Whitespace(_) => Expr::Blank,
             Token::LeftParen => {
                 let remainder = self.tokens[self.position..].to_vec();
+                let closing_paren_idx = remainder
+                    .iter()
+                    .cloned()
+                    .position(|t| t == Token::RightParen)
+                    .unwrap();
+                let group = remainder[..closing_paren_idx].to_vec();
+                let (expr, advance) = self.parse_group(group);
+                self.position += advance;
+                expr
             }
-            Token::RightParen => {}
+            // Token::RightParen => {}
             // Binary
             Token::Plus
             | Token::Minus
@@ -118,6 +127,14 @@ impl Parser {
             // Token::EOL => {}
             _ => Expr::Blank,
         }
+    }
+
+    /// Returns the parsed expression and the number of tokens consumed
+    fn parse_group(&mut self, tokens: Vec<Token>) -> (Expr, usize) {
+        let mut position = 0;
+        let mut expr = Expr::Blank;
+
+        while position < tokens.len() {}
     }
 
     fn current_token(&self) -> Token {

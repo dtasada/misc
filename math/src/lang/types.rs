@@ -1,6 +1,6 @@
 use super::tokens::*;
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum Expr {
     Blank,
     Number(f64),
@@ -8,7 +8,6 @@ pub enum Expr {
     Unary(Box<UnaryExpr>),
     Bin(Box<BinExpr>),
     Assignment(Box<AssignmentExpr>),
-    UnparsedExpr(Box<Expr>),
     UnparsedToken(Token),
 }
 
