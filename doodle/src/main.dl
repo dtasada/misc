@@ -1,5 +1,2 @@
 // Struct instance
-let r1 = Rect {
-	width: 10.2,
-	height: 45.2 + 10,
-}
+let r1 = 2 * (3 + 4);
